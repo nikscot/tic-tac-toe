@@ -1,24 +1,24 @@
 import edu.jsu.mcis.*;
 
 public class TicTacToeKeywords {
-	private TicTacToeModel model;
+	private TicTacToeGUI m;
 	
 	public void startNewGame() {
-		model = new TicTacToeModel();
+		m = new TicTacToeGUI();
 
 	}
 	
 	public void markLocation(int row, int col) {
-		model.makeMark("X", row, col); 
+		m.makeMark(row, col); 
 
 	}
 	
 	public String getMark(int row, int col) {
-		return model.getMark(row, col);
+		return m.getMark(row, col);
 	}
     
 	public String getWinner() {
 		
-		return "X";
+		return m.getWinner();
 	}
 }
